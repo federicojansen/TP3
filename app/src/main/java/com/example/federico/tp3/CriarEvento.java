@@ -22,29 +22,6 @@ public class CriarEvento  extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        /*
-        String sql = "CREATE TABLE"+TABELA+"("
-                + ID + "integer primary key autoincrement,"
-                + NOME_EVENTO + "text,"
-                + DATA + "text,"
-                + HORA + "text"
-                + GRUPOS + "text,"
-                + ENDERECO + "text,"
-                +");";
-        db.execSQL(sql);
-        */
-
-        /*
-        db.execSQL("CREATE TABLE"+TABELA+"("
-                + ID + "integer primary key autoincrement,"
-                + NOME_EVENTO + "text,"
-                + DATA + "text,"
-                + HORA + "text"
-                + GRUPOS + "text,"
-                + ENDERECO + "text,"
-                +")";\
-                */
-
         db.execSQL("CREATE TABLE " + TABELA + " ( " +
                 ID + " integer primary key autoincrement , " +
                 NOME_EVENTO + " text , " +

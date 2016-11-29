@@ -6,11 +6,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class CriaRoupa extends SQLiteOpenHelper {
     private static final String NOME_BANCO = "roupas.db";
-    private static final String TABELA = "eventos";
-    private static final String ID = "_id";
-    private static final String NOME_PECA = "nome";
-    private static final String CATEGORIA = "categoria";
-    private static final String FAVORITA = "favorita";
+    public static final String TABELA = "eventos";
+    public static final String ID = "_id";
+    public static final String NOME_PECA = "nome";
+    public static final String CATEGORIA = "categoria";
+    public static final String FAVORITA = "favorita";
     private static final int VERSAO = 1;
 
     public CriaRoupa(Context context){
@@ -19,13 +19,13 @@ public class CriaRoupa extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE"+TABELA+"("
-                + ID + "integer primary key autoincrement,"
-                + NOME_PECA + "text,"
-                + CATEGORIA + "text,"
-                + FAVORITA + "text"
-                +")";
-        db.execSQL(sql);
+
+        db.execSQL("CREATE TABLE " + TABELA + " ( " +
+                ID + " integer primary key autoincrement , " +
+                NOME_PECA + " text , " +
+                CATEGORIA + " text , " +
+                FAVORITA + " text );"
+        );
     }
 
     @Override
