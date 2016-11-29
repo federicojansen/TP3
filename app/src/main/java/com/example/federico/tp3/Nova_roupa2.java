@@ -80,5 +80,6 @@ public class Nova_roupa2  extends AppCompatActivity {
                 }
             }
         });
+        builder.show();
     }
 }
