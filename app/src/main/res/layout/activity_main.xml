@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/LinearLayout"
     android:layout_width="match_parent"
@@ -14,17 +15,6 @@
     android:baselineAligned="false">
 
     <Button
-        android:text="@string/listar_eventos"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_listar_eventos"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@android:color/holo_blue_bright"
-        android:textColor="@android:color/black"
-        />
-
-    <Button
         android:text="@string/adicionar_evento"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
@@ -35,17 +25,6 @@
         android:layout_alignLeft="@+id/button_listar_roupas"
         android:layout_alignStart="@+id/button_listar_roupas"
         android:layout_marginBottom="23dp" />
-
-    <Button
-        android:text="@string/gerar_combinaçoes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_gerar"
-        android:background="@android:color/holo_blue_dark"
-        android:textColor="@android:color/black"
-        android:layout_marginBottom="21dp"
-        android:layout_above="@+id/button_roupa"
-        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="@string/adicionar_roupa"
@@ -71,5 +50,35 @@
         android:layout_above="@+id/button_listar_eventos"
         android:layout_alignLeft="@+id/button_listar_eventos"
         android:layout_alignStart="@+id/button_listar_eventos" />
+
+    <Button
+        android:text="@string/listar_eventos"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_listar_eventos"
+        android:background="@android:color/holo_blue_bright"
+        android:textColor="@android:color/black"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/Stylus"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/gerar_combinaçoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_gerar"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
 
 </RelativeLayout>
