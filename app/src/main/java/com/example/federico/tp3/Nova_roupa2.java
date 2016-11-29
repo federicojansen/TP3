@@ -6,12 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Nova_roupa2  extends AppCompatActivity {
 
-    EditText nomeRoupa, dataEvento, horaEvento, presentesEvento, enderecoEvento;
-    Button button_confirma;
+    Switch favorito;
+    TextView categoria;
+    EditText nomePeca;
+    Button button_confirma, button_option;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
