@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         button_roupa.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent it = new Intent(MainActivity.this, CriaRoupa.class);
+                Intent it = new Intent(MainActivity.this, Nova_roupa.class);
                 startActivity(it);
             }
         });
