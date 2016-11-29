@@ -24,6 +24,7 @@
         <activity android:name=".Nova_roupa2"/>
         <activity android:name=".ListarRoupa"/>
         <activity android:name=".ListarEvento"/>
+        <activity android:name=".GerarCombinacoes"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
