@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         button_evento.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent it = new Intent(MainActivity.this, CriaRoupa.class);
+                Intent it = new Intent(MainActivity.this, Novo_evento.class);
                 startActivity(it);
             }
         });
