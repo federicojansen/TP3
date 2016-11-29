@@ -1,17 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/LinearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/principal"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.federico.tp3.MainActivity">
+    tools:context="com.example.federico.tp3.MainActivity"
+    android:orientation="vertical"
+    android:baselineAligned="false">
 
-    <TextView
+    <Button
+        android:text="@string/listar_eventos"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_listar_eventos"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_blue_bright"
+        android:textColor="@android:color/black"
+        />
+
+    <Button
+        android:text="@string/adicionar_evento"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_evento"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/black"
+        android:layout_above="@+id/button_listar_roupas"
+        android:layout_alignLeft="@+id/button_listar_roupas"
+        android:layout_alignStart="@+id/button_listar_roupas"
+        android:layout_marginBottom="23dp" />
+
+    <Button
+        android:text="@string/gerar_combinaçoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/button_gerar"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="21dp"
+        android:layout_above="@+id/button_roupa"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/adicionar_roupa"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_roupa"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/black"
+        android:layout_width="180dp"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/button_evento"
+        android:layout_alignLeft="@+id/button_evento"
+        android:layout_alignStart="@+id/button_evento" />
+
+    <Button
+        android:text="@string/listar_roupas"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_listar_roupas"
+        android:background="@android:color/holo_blue_bright"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="12dp"
+        android:layout_above="@+id/button_listar_eventos"
+        android:layout_alignLeft="@+id/button_listar_eventos"
+        android:layout_alignStart="@+id/button_listar_eventos" />
+
 </RelativeLayout>
