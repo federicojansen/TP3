@@ -2,6 +2,7 @@ package com.example.federico.tp3;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.StrictMode;
 
@@ -16,8 +17,6 @@ public class EventoController {
     public String insereDado(String nome_evento, String data, String hora, String grupos, String endereco){
         ContentValues valores;
         long resultado;
-        String erro = "Erro ao inserir registro";
-        String sucesso = "Registro inserido com sucesso";
 
         db = evento.getWritableDatabase();
         valores = new ContentValues();
@@ -31,10 +30,23 @@ public class EventoController {
         db.close();
 
         if (resultado ==-1)
-            return erro;
+            return "Erro ao inserir registro";
         else
-            return sucesso;
+            return "Registro inserido com sucesso";
 
+    }
+
+    public Cursor carregaDados(){
+        Cursor cursor;
+        String[] campos =  {evento.ID,evento.NOME_EVENTO};
+        db = evento.getReadableDatabase();
+        cursor = db.query(evento.TABELA, campos, null, null, null, null, null, null);
+
+        if(cursor!=null){
+            cursor.moveToFirst();
+        }
+        db.close();
+        return cursor;
     }
 }
 

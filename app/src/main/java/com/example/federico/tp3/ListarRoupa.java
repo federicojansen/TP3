@@ -12,12 +12,11 @@ import android.widget.Button;
 
 public class ListarRoupa extends AppCompatActivity {
 
-   // Button button_load;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.nova_roupa);
+        setContentView(R.layout.lista_roupas);
 
 
     }

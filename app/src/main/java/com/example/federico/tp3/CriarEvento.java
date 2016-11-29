@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class CriarEvento  extends SQLiteOpenHelper {
     private static final String NOME_BANCO = "eventos.db";
     public static final String TABELA = "eventos";
-    private static final String ID = "_id";
+    public static final String ID = "_id";
     public static final String NOME_EVENTO = "nome";
     public static final String DATA = "data";
     public static final String HORA = "hora";
@@ -15,12 +15,14 @@ public class CriarEvento  extends SQLiteOpenHelper {
     public static final String ENDERECO = "endereco";
     private static final int VERSAO = 1;
 
-    public CriarEvento(Context context){
+    public CriarEvento(Context context) {
         super(context, NOME_BANCO,null,VERSAO);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
+        /*
         String sql = "CREATE TABLE"+TABELA+"("
                 + ID + "integer primary key autoincrement,"
                 + NOME_EVENTO + "text,"
@@ -28,8 +30,29 @@ public class CriarEvento  extends SQLiteOpenHelper {
                 + HORA + "text"
                 + GRUPOS + "text,"
                 + ENDERECO + "text,"
-                +")";
+                +");";
         db.execSQL(sql);
+        */
+
+        /*
+        db.execSQL("CREATE TABLE"+TABELA+"("
+                + ID + "integer primary key autoincrement,"
+                + NOME_EVENTO + "text,"
+                + DATA + "text,"
+                + HORA + "text"
+                + GRUPOS + "text,"
+                + ENDERECO + "text,"
+                +")";\
+                */
+
+        db.execSQL("CREATE TABLE " + TABELA + " ( " +
+                ID + " integer primary key autoincrement , " +
+                NOME_EVENTO + " text , " +
+                DATA + " text , " +
+                HORA + " text , " +
+                GRUPOS + " text , " +
+                ENDERECO + " text );"
+        );
     }
 
     @Override

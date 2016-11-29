@@ -4,16 +4,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/buttonLoadPicture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="Selecionar imagem"
-        android:layout_gravity="center"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true">=</Button>
-
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,5 +14,29 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_above="@+id/buttonLoadPicture" />
+
+    <Button
+        android:id="@+id/buttonLoadPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Selecionar imagem"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="55dp"
+        android:layout_marginStart="55dp">=</Button>
+
+    <Button
+        android:text="Ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/buttonLoadPicture"
+        android:layout_toEndOf="@+id/buttonLoadPicture"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp" />
 
 </RelativeLayout>
